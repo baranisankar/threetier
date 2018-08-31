@@ -5,7 +5,7 @@
       ec2_group:
         name: dbsg
         description: an example EC2 group
-        vpc_id: vpc-0740fbc1e2835ce92
+        vpc_id: vpc-05b76b9da684429f3
         region: us-east-1
         rules:
           - proto: tcp
@@ -21,8 +21,8 @@
         name: dbsubnet
         description: My Fancy Ex Parrot Subnet Group
         subnets:
-          - subnet-0b0503a79298a8c76
-          - subnet-0152167653eedc3a0
+          - subnet-005ca251b6c2a21c6
+          - subnet-0aee79520e842502e
       register: dbsubnet
     - debug:
         var: dbsubnet
@@ -49,4 +49,4 @@
         path: ../feandbe/threetier.yaml
         regexp: 'DATABASENAME'
         replace: "{{ mydb.instance.endpoint }}"
-        backup: yes
+backup: yes
